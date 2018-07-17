@@ -22,8 +22,8 @@ class User < ApplicationRecord
             uniqueness: true
 
   has_secure_password
-  validetes :password_digest,
-            presence: ture,
+  validates :password_digest,
+            presence: true,
             length: {
                 minimum: 6
             }
